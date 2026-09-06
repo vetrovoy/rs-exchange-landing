@@ -1,0 +1,137 @@
+/* Home-only composition. The image keeps its natural ratio and defines the scene height. */
+.page.home {
+  --home-gutter: 24px;
+  padding: 32px var(--home-gutter) 24px;
+  container-type: inline-size;
+}
+.home .header {
+  margin-bottom: 30px;
+}
+.home .home-title {
+  position: relative;
+  z-index: 2;
+  width: max-content;
+  max-width: 100%;
+  margin-left: 15%;
+  font-size: clamp(52px, 18cqw, 70px);
+  line-height: 0.89;
+  letter-spacing: -0.065em;
+  text-align: left;
+}
+.home .highlight {
+  margin-top: 16px;
+  margin-left: -10px;
+  padding: 0 9px 7px;
+  line-height: 0.88;
+}
+.home .country {
+  margin-top: 8px;
+  margin-left: 1px;
+  font-size: 0.48em;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-align: center;
+}
+.home .hero-scene {
+  position: relative;
+  margin: -15cqw calc(-1 * var(--home-gutter)) 0;
+}
+.home .hero-art {
+  margin-top: 96px;
+}
+.home .hero-art > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.home .founder-notes {
+  display: contents;
+}
+.home .founder-notes img {
+  position: absolute;
+  height: auto;
+  object-fit: contain;
+}
+.home .founder-note {
+  left: 4%;
+  top: 17%;
+  width: 28%;
+}
+.home .promise-note {
+  right: -3%;
+  top: -42%;
+  width: 33%;
+}
+.home .scene-sticker {
+  right: 3%;
+  top: -10%;
+  width: 26%;
+}
+.home .stats {
+  position: absolute;
+  right: 2%;
+  top: 18%;
+  width: 21%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #515150;
+}
+.home .stats > div {
+  text-align: left;
+  padding: 0 0 8px;
+  margin-bottom: 8px;
+  border: 0;
+  border-bottom: 1px solid #c8c7c3;
+}
+.home .stats > div:last-child {
+  margin-bottom: 0;
+  border: 0;
+}
+.home .stats strong {
+  font-size: clamp(11px, 3.2cqw, 13px);
+}
+.home .stats span {
+  margin-top: 3px;
+  font-size: clamp(9px, 2.5cqw, 10px);
+}
+.home .home-action {
+  position: relative;
+  z-index: 3;
+  width: 84%;
+  margin: -27cqw auto 0;
+}
+.home .cta {
+  min-height: 60px;
+  padding: 16px 12px;
+  gap: 24px;
+  font-size: clamp(16px, 4.7cqw, 18px);
+}
+.home .delivery-note {
+  gap: 9px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.home .delivery-note span span {
+  font-size: 10px;
+}
+@media (max-width: 359px) {
+  .page.home {
+    --home-gutter: 18px;
+  }
+  .home .home-title {
+    margin-left: 12%;
+  }
+  .home .stats > div {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .home .home-action {
+    width: 92%;
+    margin-top: -23cqw;
+  }
+  .home .cta {
+    min-height: 52px;
+  }
+}
