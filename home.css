@@ -1,4 +1,15 @@
 /* Home-only composition. The image keeps its natural ratio and defines the scene height. */
+html.home-document,
+.home-document body {
+  overflow-x: hidden;
+}
+/* Clip decoration without creating a horizontal scroll container in modern Safari. */
+@supports (overflow-x: clip) {
+  html.home-document,
+  .home-document body {
+    overflow-x: clip;
+  }
+}
 .page.home {
   --home-gutter: 24px;
   padding: 32px var(--home-gutter) 24px;
