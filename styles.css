@@ -49,10 +49,11 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-off
 .cta { display: flex; align-items: center; justify-content: center; gap: 22px; min-height: 56px; width: 100%; padding: 14px 12px; border: 1px solid #ddea7a; border-radius: 32px; background: #e5fa68; color: #3c4219; font-size: 18px; font-weight: 700; line-height: 1.3; box-shadow: 0 2px 3px #0002; }
 .cta img { flex-shrink: 0; width: 22px; height: 20px; object-fit: contain; }
 .cta:hover { background: #dff55d; }
-.home-copy { padding: 22px 18px 0; }
-.home h1 { font-size: clamp(60px, 20.5vw, 88px); font-weight: 900; letter-spacing: -.065em; line-height: .89; text-align: center; }
-.highlight { display: inline-block; max-width: 100%; margin-top: 14px; padding: 0 10px 7px; font-size: .86em; background: #e5fa68; border-radius: 14px; }
-.country { display: block; margin-top: 12px; font-size: .45em; font-weight: 600; line-height: 1.1; letter-spacing: -.045em; }
+.home-copy { padding: 22px 18px 0; container-type: inline-size; }
+.home h1 { font-size: clamp(30px, 11cqw, 44px); font-weight: 900; letter-spacing: -.045em; line-height: 1.1; text-align: center; }
+.headline-line { display: block; white-space: nowrap; }
+.headline-subtitle { margin-top: 12px; font-size: .7em; letter-spacing: -.035em; }
+.highlight { display: inline-block; padding: 3px 7px 5px; background: #e5fa68; border-radius: 9px; }
 .hero-image { width: 100%; height: auto; margin-top: 0; }
 .home-details { padding: 0 18px 28px; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
