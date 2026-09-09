@@ -7,7 +7,6 @@
   color: #171716;
   background: #faf9f7;
   font-synthesis: none;
-  scroll-snap-type: y mandatory;
   overflow-x: hidden;
   scrollbar-width: none;
 }
@@ -27,8 +26,6 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-off
   grid-template-rows: auto minmax(0, 1fr) auto;
   min-width: 0;
   background: #fbfaf8;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 .header {
   position: relative;
