@@ -8,25 +8,20 @@
   background: #faf9f7;
   font-synthesis: none;
   overflow-x: hidden;
-  scrollbar-width: none;
 }
 * { box-sizing: border-box; }
-html::-webkit-scrollbar { display: none; }
 body { margin: 0; overflow-x: hidden; }
 h1, h2, h3, p { margin: 0; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
 a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-offset: 3px; }
 .pages { max-width: 430px; margin-inline: auto; }
-/* Each screen owns its footer. Only the middle row scrolls; no transformed fixed ancestor. */
+/* All sections participate in the document's single, natural scroll flow. */
 .screen {
-  height: 100vh;
-  height: 100dvh;
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
   min-width: 0;
   background: #fbfaf8;
 }
+.screen + .screen { padding-top: 32px; }
 .header {
   position: relative;
   z-index: 5;
@@ -44,14 +39,11 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-off
 .menu nav a { display: block; padding: 13px 12px; font-size: 14px; border-radius: 10px; }
 .menu nav a:hover, .menu nav a[aria-current='location'] { background: #e5fa68; }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.screen-content { min-height: 0; min-width: 0; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
-.screen-content:focus-visible { outline: 2px solid #657c00; outline-offset: -2px; }
+.screen-content { min-width: 0; }
 .screen-footer {
   position: relative;
   z-index: 4;
   padding: 10px 20px max(12px, env(safe-area-inset-bottom, 0px));
-  background: #fbfaf8;
-  border-top: 1px solid #e8e7de;
 }
 .cta { display: flex; align-items: center; justify-content: center; gap: 22px; min-height: 56px; width: 100%; padding: 14px 12px; border: 1px solid #ddea7a; border-radius: 32px; background: #e5fa68; color: #3c4219; font-size: 18px; font-weight: 700; line-height: 1.3; box-shadow: 0 2px 3px #0002; }
 .cta img { flex-shrink: 0; width: 22px; height: 20px; object-fit: contain; }
