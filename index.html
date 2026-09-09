@@ -1,87 +1,95 @@
 <!doctype html>
-<html lang="ru" class="home-document">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fbfaf8" />
-    <meta
-      name="description"
-      content="Monkey Exchange — обмен рублей на донги во Вьетнаме."
-    />
-    <title>Обмен рублей на донги — Monkey Exchange</title>
-    <link rel="icon" href="assets/logo.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="home.css" />
-  </head>
-  <body>
-    <div class="page home">
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbfaf8">
+  <meta name="description" content="Monkey Exchange — обмен рублей на донги во Вьетнаме. Доставка и обмен онлайн.">
+  <title>Monkey Exchange — обмен рублей на донги</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="pages">
+    <section class="screen home" id="home" aria-labelledby="home-title">
       <header class="header">
-        <a
-          class="brand"
-          href="index.html"
-          aria-label="Monkey Exchange — главная"
-          ><img src="assets/logo.png" alt="" width="40" height="36" /><span
-            ><span class="brand-name">Monkey<br />Exchange</span
-            ><span class="tagline">Во Вьетнаме как дома</span></span
-          ></a
-        >
+        <a class="brand" href="#home" aria-label="Monkey Exchange — главная"><img src="assets/logo.png" alt="" width="32" height="29"><span>Monkey<br>Exchange</span></a>
         <details class="menu">
-          <summary>
-            <span class="sr-only">Меню</span
-            ><img src="assets/menu.png" alt="" width="44" height="44" />
-          </summary>
-          <nav aria-label="Основная навигация">
-            <a href="index.html" aria-current="page">Главная</a>
-            <a href="steps.html">Доставка донгов</a>
-            <a href="exchange.html">Обмен онлайн</a>
+          <summary><span class="sr-only">Меню</span><img src="assets/menu.png" alt="" width="44" height="44"></summary>
+          <nav aria-label="Разделы сайта">
+            <a href="#home" aria-current="location">Главная</a>
+            <a href="#delivery">Доставка донгов</a>
+            <a href="#online">Обмен онлайн</a>
           </nav>
         </details>
       </header>
-      <main>
-        <h1 class="home-title">
-          Обмен<br />рублей<br /><span class="highlight">на донги</span
-          ><span class="country">во Вьетнаме</span>
-        </h1>
-        <div class="hero-scene">
-        <div class="hero-art">
-          <img
-            src="assets/home/founder-currency-collage.png"
-            alt="Вова, основатель Monkey Exchange, на фоне флага Вьетнама и купюр"
-            width="720"
-            height="821"
-            fetchpriority="high"
-            decoding="async"
-          />
+      <div class="screen-content" tabindex="0" role="region" aria-label="Главная">
+        <div class="home-copy">
+          <h1 id="home-title">Обмен<br>рублей<br><span class="highlight">на донги</span><span class="country">во Вьетнаме</span></h1>
         </div>
-        <div class="stats" aria-label="О нас">
-          <div><strong>12 000+</strong><span>обменов</span></div>
-          <div><strong>150+</strong><span>отзывов</span></div>
-          <div><strong>с 2020 года</strong><span>работаем</span></div>
+        <img class="hero-image" src="assets/home/vova-currency-collage.png" alt="Вова на фоне флага Вьетнама и купюр" width="918" height="978" fetchpriority="high" decoding="async">
+        <div class="home-details">
+          <div class="stats" aria-label="Наши преимущества">
+            <div><strong>12 000+</strong><span>обменов</span></div>
+            <div><strong>150+</strong><span>отзывов</span></div>
+            <div><strong>с 2020 года</strong><span>работаем</span></div>
+          </div>
+          <p class="delivery-note"><img src="assets/location-pin.png" alt="" width="18" height="23"><span><strong>Нячанг и Дананг</strong><span>Доставка обычно 15–30 минут</span></span></p>
         </div>
-        <div class="founder-notes">
-          <img
-            class="scene-sticker"
-            src="assets/home/more-time-sticker.png"
-            alt="Больше времени на главное"
-            decoding="async"
-          />
-          <img
-            class="promise-note"
-            src="assets/home/no-prepayment-note.png"
-            alt="Быстро. Удобно. Без предоплаты."
-            loading="lazy"
-            decoding="async"
-          />
+      </div>
+      <footer class="screen-footer"><a class="cta" href="https://t.me/monkeyExchange16/86">Получить донги<img src="assets/arrow-right.png" alt="" width="22" height="20"></a></footer>
+    </section>
+    <section class="screen delivery" id="delivery" aria-labelledby="delivery-title">
+      <header class="header">
+        <a class="brand" href="#home" aria-label="Monkey Exchange — главная"><img src="assets/logo.png" alt="" width="32" height="29"><span>Monkey<br>Exchange</span></a>
+        <details class="menu">
+          <summary><span class="sr-only">Меню</span><img src="assets/menu.png" alt="" width="44" height="44"></summary>
+          <nav aria-label="Разделы сайта">
+            <a href="#home">Главная</a>
+            <a href="#delivery" aria-current="location">Доставка донгов</a>
+            <a href="#online">Обмен онлайн</a>
+          </nav>
+        </details>
+      </header>
+      <div class="screen-content" tabindex="0" role="region" aria-label="Как получить донги с доставкой">
+        <div class="section-copy">
+          <p class="eyebrow">КАК ЭТО РАБОТАЕТ?</p>
+          <h2 id="delivery-title">Три простых<br><span class="underlined">шага<img src="assets/lime-underline.png" alt=""></span></h2>
+          <ol class="step-list">
+          <li class="step"><div class="step-heading"><h3>Оформляете заявку</h3></div><p>Указываете сумму и удобный банкомат. Это займет минуту.</p></li>
+          <li class="step"><div class="step-heading"><h3>Приезжает курьер</h3></div><p>В удобное для вас время. Прямо к вам.</p></li>
+          <li class="step"><div class="step-heading"><h3>Получаете донги</h3></div><p>Проверяете сумму. Получаете донги. Переводите рубли. Готово!</p><div class="step-art cash-art"><img src="assets/steps/cash-handover.png" alt="Передача наличных донгов" loading="lazy" decoding="async"></div></li>
+          </ol>
         </div>
+      </div>
+      <footer class="screen-footer"><a class="cta" href="https://t.me/monkeyExchange16/86">Заказать доставку<img src="assets/arrow-right.png" alt="" width="22" height="20"></a></footer>
+    </section>
+    <section class="screen online" id="online" aria-labelledby="online-title">
+      <header class="header">
+        <a class="brand" href="#home" aria-label="Monkey Exchange — главная"><img src="assets/logo.png" alt="" width="32" height="29"><span>Monkey<br>Exchange</span></a>
+        <details class="menu">
+          <summary><span class="sr-only">Меню</span><img src="assets/menu.png" alt="" width="44" height="44"></summary>
+          <nav aria-label="Разделы сайта">
+            <a href="#home">Главная</a>
+            <a href="#delivery">Доставка донгов</a>
+            <a href="#online" aria-current="location">Обмен онлайн</a>
+          </nav>
+        </details>
+      </header>
+      <div class="screen-content" tabindex="0" role="region" aria-label="Как обменять онлайн">
+        <div class="section-copy">
+          <p class="eyebrow">ВТОРОЙ ВАРИАНТ</p>
+          <h2 id="online-title">Обмен<br><span class="underlined">онлайн<img src="assets/lime-underline.png" alt=""></span></h2>
+          <p class="intro-description">Получите донги в банкомате по QR-коду. Карта не требуется.</p>
+          <ol class="step-list">
+          <li class="step"><div class="step-heading"><h3>Оформляете заявку онлайн</h3></div><p>Указываете сумму и удобный банкомат. Это займет минуту.</p></li>
+          <li class="step"><div class="step-heading"><h3>Получаете QR-код</h3></div><p>Мы обменяем рубли на донги и отправим вам QR-код в приложении.</p></li>
+          <li class="step"><div class="step-heading"><h3>Снимаете донги</h3></div><p>Показываете QR-код в банкомате и получаете наличные. Готово!</p><div class="step-art atm-art"><img src="assets/exchange/hand-with-qr-phone.png" alt="Телефон с QR-кодом в руке" loading="lazy" decoding="async"><img src="assets/exchange/bidv-atm.png" alt="Банкомат BIDV" loading="lazy" decoding="async"></div></li>
+          </ol>
         </div>
-        <div class="home-action">
-          <a class="cta" href="steps.html">Получить донги<img src="assets/arrow-right.png" alt="" width="22" height="20" /></a>
-          <p class="delivery-note">
-            <img src="assets/location-pin.png" alt="" width="18" height="23" />
-            <span><strong>Нячанг и Дананг</strong><span>Доставка обычно 15–30 минут</span></span>
-          </p>
-        </div>
-      </main>
-    </div>
-  </body>
+      </div>
+      <footer class="screen-footer"><a class="cta" href="https://t.me/monkeyExchange16/86">Обменять онлайн<img src="assets/arrow-right.png" alt="" width="22" height="20"></a></footer>
+    </section>
+  </main>
+</body>
 </html>
