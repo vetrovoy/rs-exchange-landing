@@ -71,8 +71,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-off
 .home-visual > .hero-image, .home-visual > .home-details { grid-area: 1 / 1; }
 .home-details { position: relative; align-self: end; padding: 16px 18px 14px; background: linear-gradient(transparent, #fbfaf8e6); }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
-.stats > div { position: relative; background: transparent; padding: 13px 5px; text-align: center; color: #171716; }
-.stats > div + div::before { content: ""; position: absolute; left: -4px; top: 12px; bottom: 12px; width: 1px; background: #d2d2cc; }
+.stats > div { background: #eaeae6; border-radius: 9px; padding: 13px 5px; text-align: center; color: #5c5c58; }
 .stats strong { display: block; font-size: clamp(12px, 3.65vw, 15px); line-height: 1.25; white-space: nowrap; }
 .stats span { display: block; font-size: 11px; margin-top: 5px; }
 .delivery-note { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 22px; font-size: 13px; line-height: 1.5; }
