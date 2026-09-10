@@ -77,5 +77,13 @@
       <footer class="screen-footer"><a class="cta" href="https://t.me/monkey_obmen_vietnambot">Обменять валюту<img src="assets/arrow-right.png" alt="" width="22" height="20"></a></footer>
     </section>
   </main>
+  <script>
+    const menu = document.querySelector('.menu');
+    menu.addEventListener('click', (event) => {
+      if (event.target.closest('nav a')) {
+        menu.open = false;
+      }
+    });
+  </script>
 </body>
 </html>
