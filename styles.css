@@ -65,6 +65,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-off
 .home h1 { font-size: 14.3cqw; font-weight: 900; letter-spacing: -.045em; line-height: 1.1; text-align: center; }
 .headline-line { display: block; white-space: nowrap; }
 .headline-subtitle { margin-top: 12px; font-size: calc(9.45cqw - 1.4px); letter-spacing: -.035em; }
+.headline-highlight { display: inline-block; padding: 3px 7px 5px; color: #5c5c58; background: #eaeae6; border-radius: 9px; }
 .hero-image { width: 100%; height: auto; margin-top: 0; }
 .home-visual { display: grid; isolation: isolate; }
 .home-visual > .hero-image, .home-visual > .home-details { grid-area: 1 / 1; }
