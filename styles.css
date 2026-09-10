@@ -40,6 +40,10 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-off
 .header-actions { display: flex; align-items: center; gap: 6px; }
 .instagram-link { display: flex; align-items: center; justify-content: center; min-height: 40px; padding: 8px 10px; border-radius: 22px; background: linear-gradient(115deg, #b44514, #b71865 52%, #6538ae); color: #fff; font-size: 12px; font-weight: 700; white-space: nowrap; }
 .instagram-link:hover { filter: brightness(1.08); }
+.instagram-link { gap: 6px; }
+.instagram-icon { width: 18px; height: 18px; flex: 0 0 18px; }
+.instagram-link .instagram-icon { filter: brightness(0) invert(1); }
+.menu nav .menu-instagram { display: flex; align-items: center; gap: 10px; }
 .brand { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; line-height: 1.1; }
 .brand img { width: 32px; height: 29px; object-fit: contain; }
 .menu summary { display: grid; place-items: center; width: 44px; height: 44px; list-style: none; cursor: pointer; border-radius: 50%; }
@@ -95,7 +99,7 @@ h3 { font-size: 25px; font-weight: 900; line-height: 1.06; letter-spacing: -.04e
 .atm-art img:first-child { max-height: 185px; }
 @supports (overflow-x: clip) { :root, body { overflow-x: clip; } }
 @media (max-width: 359px) {
-  .instagram-link { font-size: 11px; padding-inline: 8px; }
+  .instagram-link { font-size: 10px; padding-inline: 6px; gap: 4px; }
   .header { padding-inline: 16px; }
   .section-copy { padding-inline: 16px; }
   .screen-footer { padding-inline: 16px; }
