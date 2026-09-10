@@ -1,0 +1,26 @@
+[Unit]
+Description=Publish Monkey Exchange from GitHub master
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=exchange-publisher
+Group=exchange-publisher
+ExecStart=/usr/bin/python3 /usr/local/lib/exchange-publisher/publish.py
+StateDirectory=exchange-publisher
+BindPaths=/var/lib/docker/volumes/vietnamlive_backend_caddy_data/_data/exchange-site:/srv/exchange-public
+ReadWritePaths=/var/lib/exchange-publisher /srv/exchange-public
+Environment=GIT_TERMINAL_PROMPT=0
+UMask=0022
+TimeoutStartSec=240
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+

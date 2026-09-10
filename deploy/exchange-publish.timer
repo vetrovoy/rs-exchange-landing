@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Monkey Exchange master every minute
+
+[Timer]
+OnBootSec=30s
+OnUnitInactiveSec=60s
+AccuracySec=5s
+Unit=exchange-publish.service
+
+[Install]
+WantedBy=timers.target
