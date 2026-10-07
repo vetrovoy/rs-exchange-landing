@@ -89,6 +89,41 @@
       <footer class="screen-footer"><a class="cta" href="https://t.me/monkey_obmen_vietnambot?start=id20">Обменять валюту<img src="assets/arrow-right.png" alt="" width="22" height="20"></a></footer>
     </section>
   </main>
+  <div class="messenger-modal" id="messenger-modal" hidden>
+    <div class="messenger-modal__backdrop" data-modal-close></div>
+    <section class="messenger-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="messenger-modal-title" aria-describedby="messenger-modal-description" tabindex="-1">
+      <button class="messenger-modal__close" type="button" aria-label="Закрыть окно выбора мессенджера" data-modal-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </button>
+      <div class="messenger-modal__heading">
+        <h2 id="messenger-modal-title">Написать оператору</h2>
+        <p id="messenger-modal-description">Рассчитаем точную сумму к получению в донгах и привезем наличные</p>
+      </div>
+      <div class="messenger-modal__actions">
+        <a class="messenger-link messenger-link--telegram" href="https://t.me/monkey_obmen_vietnambot?start=id20" target="_blank" rel="noopener noreferrer" data-metrika-goal="telegram_click">
+          <span class="messenger-link__label">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path></svg>
+            <span>Перейти в Telegram</span>
+          </span>
+          <span class="messenger-link__badge">Быстрее всего</span>
+        </a>
+        <div class="messenger-modal__secondary-actions">
+          <a class="messenger-link messenger-link--secondary messenger-link--whatsapp" href="https://wa.me/79952269645" target="_blank" rel="noopener noreferrer" data-metrika-goal="whatsapp_click">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"></path></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a class="messenger-link messenger-link--secondary" href="https://max.ru/79530970708" target="_blank" rel="noopener noreferrer" data-metrika-goal="max_click">
+            <img class="messenger-link__max-icon" src="assets/max.svg" alt="" width="21" height="21">
+            <span>Max</span>
+          </a>
+        </div>
+      </div>
+      <p class="messenger-modal__trust">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <span>Без предоплаты • Проверка купюр на месте</span>
+      </p>
+    </section>
+  </div>
   <script>
     const menu = document.querySelector('.menu');
     menu.addEventListener('click', (event) => {
@@ -96,31 +131,79 @@
         menu.open = false;
       }
     });
+    const modal = document.querySelector('#messenger-modal');
+    const modalCloseButton = modal.querySelector('.messenger-modal__close');
+    const page = document.querySelector('.pages');
+    let modalTrigger = null;
+
+    const getFocusableElements = () => Array.from(modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+
+    const openModal = (trigger) => {
+      modalTrigger = trigger;
+      modal.hidden = false;
+      page.inert = true;
+      document.body.classList.add('modal-open');
+      requestAnimationFrame(() => {
+        modal.classList.add('is-open');
+        modalCloseButton.focus();
+      });
+    };
+
+    const closeModal = () => {
+      if (modal.hidden) return;
+      modal.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+      const trigger = modalTrigger;
+      const finishClose = () => {
+        modal.hidden = true;
+        page.inert = false;
+        modalTrigger = null;
+        trigger?.focus();
+      };
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finishClose();
+      } else {
+        modal.addEventListener('transitionend', finishClose, { once: true });
+      }
+    };
+
     document.querySelectorAll('.cta').forEach((link) => {
       link.addEventListener('click', (event) => {
-        if (typeof window.ym !== 'function') return;
-        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
-          window.ym(112456455, 'reachGoal', 'exchange_click');
-          return;
-        }
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
-        let navigated = false;
-        const navigate = () => {
-          if (navigated) return;
-          navigated = true;
-          window.location.assign(link.href);
-        };
-        // Keep Telegram accessible if analytics is blocked or slow.
-        const fallback = setTimeout(navigate, 500);
+        openModal(link);
+      });
+    });
+
+    modal.querySelectorAll('[data-modal-close]').forEach((control) => {
+      control.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeModal();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const focusable = getFocusableElements();
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    modal.querySelectorAll('[data-metrika-goal]').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (typeof window.ym !== 'function') return;
         try {
-          window.ym(112456455, 'reachGoal', 'exchange_click', {}, () => {
-            clearTimeout(fallback);
-            navigate();
-          });
-        } catch {
-          clearTimeout(fallback);
-          navigate();
-        }
+          window.ym(112456455, 'reachGoal', link.dataset.metrikaGoal);
+        } catch {}
       });
     });
   </script>

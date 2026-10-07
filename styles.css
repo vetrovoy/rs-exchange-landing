@@ -16,6 +16,7 @@ h1, h2, h3, p { margin: 0; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
 a:focus-visible, summary:focus-visible { outline: 3px solid #657c00; outline-offset: 3px; }
+button:focus-visible { outline: 3px solid #657c00; outline-offset: 3px; }
 .pages { max-width: 430px; margin-inline: auto; }
 /* All sections participate in the document's single, natural scroll flow. */
 .screen {
@@ -97,6 +98,36 @@ h3 { font-size: 25px; font-weight: 900; line-height: 1.06; letter-spacing: -.04e
 .atm-art { display: grid; grid-template-columns: 1fr 1fr; align-items: end; }
 .atm-art img { max-height: 240px; }
 .atm-art img:first-child { max-height: 185px; }
+.modal-open { overflow: hidden; }
+.messenger-modal[hidden] { display: none; }
+.messenger-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; }
+.messenger-modal__backdrop { position: absolute; inset: 0; background: #171716a8; opacity: 0; backdrop-filter: blur(4px); transition: opacity .2s ease; }
+.messenger-modal__dialog { position: relative; width: min(100%, 370px); max-height: calc(100dvh - 32px); overflow-y: auto; padding: 24px; border: 1px solid #deded8; border-radius: 26px; background: #fbfaf8; box-shadow: 0 24px 60px #0006; opacity: 0; transform: translateY(10px) scale(.98); transition: opacity .2s ease, transform .2s ease; }
+.messenger-modal.is-open .messenger-modal__backdrop, .messenger-modal.is-open .messenger-modal__dialog { opacity: 1; }
+.messenger-modal.is-open .messenger-modal__dialog { transform: translateY(0) scale(1); }
+.messenger-modal__close { position: absolute; top: 18px; right: 18px; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: #eaeae6; color: #777770; cursor: pointer; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.messenger-modal__close:hover { background: #deded8; color: #171716; }
+.messenger-modal__close:active { transform: scale(.95); }
+.messenger-modal__close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-width: 2; }
+.messenger-modal__heading { padding: 5px 42px 0 0; }
+.messenger-modal__heading h2 { font-size: 24px; line-height: 1.08; letter-spacing: -.04em; }
+.messenger-modal__heading p { margin-top: 6px; color: #777770; font-size: 13px; line-height: 1.4; }
+.messenger-modal__actions { margin-top: 22px; }
+.messenger-link { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 13px 14px; border-radius: 28px; font-size: 15px; font-weight: 700; line-height: 1.3; transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+.messenger-link:active { transform: scale(.98); }
+.messenger-link svg { flex: 0 0 21px; width: 21px; height: 21px; fill: currentColor; }
+.messenger-link--telegram { justify-content: space-between; border: 1px solid #ddea7a; background: #e5fa68; color: #3c4219; box-shadow: 0 4px 14px #9bb51b38; }
+.messenger-link--telegram:hover { background: #dff55d; }
+.messenger-link__label { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.messenger-link__label > span { white-space: nowrap; }
+.messenger-link__badge { flex: 0 0 auto; padding: 3px 7px; border-radius: 12px; background: #171716; color: #e5fa68; font-size: 9px; font-weight: 900; letter-spacing: .06em; line-height: 1.2; text-transform: uppercase; }
+.messenger-modal__secondary-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+.messenger-link--secondary { border: 1px solid #deded8; background: #f0efec; color: #31312f; font-size: 14px; }
+.messenger-link--secondary:hover { background: #e7e6e1; }
+.messenger-link--whatsapp svg { color: #20b95b; }
+.messenger-link__max-icon { display: block; flex: 0 0 21px; width: 21px; height: 21px; }
+.messenger-modal__trust { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 20px; padding-top: 15px; border-top: 1px solid #e6e6e1; color: #85857e; font-size: 11px; font-weight: 600; line-height: 1.25; text-align: center; }
+.messenger-modal__trust svg { flex: 0 0 16px; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
 @supports (overflow-x: clip) { :root, body { overflow-x: clip; } }
 @media (max-width: 359px) {
   .instagram-link { font-size: 10px; padding-inline: 6px; gap: 4px; }
@@ -107,5 +138,20 @@ h3 { font-size: 25px; font-weight: 900; line-height: 1.06; letter-spacing: -.04e
   .home-details { padding-inline: 14px; }
   h3 { font-size: 23px; }
   .cta { font-size: 16px; }
+  .messenger-modal { padding: 12px; }
+  .messenger-modal__dialog { padding: 20px; border-radius: 22px; }
+  .messenger-modal__close { top: 14px; right: 14px; }
+  .messenger-modal__heading h2 { font-size: 22px; }
+  .messenger-link--telegram { padding-inline: 12px; }
+  .messenger-link__label { gap: 7px; }
+  .messenger-link__label > span { font-size: 14px; }
+  .messenger-link__badge { padding-inline: 6px; font-size: 8px; }
 }
-@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
+@media (max-height: 430px) {
+  .messenger-modal { align-items: start; overflow-y: auto; }
+  .messenger-modal__dialog { margin-block: 8px; max-height: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  .messenger-modal__backdrop, .messenger-modal__dialog, .messenger-modal__close, .messenger-link { transition: none; }
+}
